@@ -45,7 +45,7 @@ void AnchorChatWindow::Draw() {
     }
 
     if (mCaptureFrames > 0) {
-        pauseInputFrames--;
+        mCaptureFrames--;
         if (mCaptureFrames == 0) {
             // genuinely enough to stop game from registering game inputs between chat messages yes it's stupid
             ControllerUnblockGameInput(ANCHOR_CHAT_GAME_INPUT_BLOCK_ID);
