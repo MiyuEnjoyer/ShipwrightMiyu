@@ -123,8 +123,10 @@ void AnchorChatWindow::DrawElement() {
         }
 
         ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(entry.colorR, entry.colorG, entry.colorB, 1.0f));
-        ImGui::TextWrapped("%s: %s", entry.senderName.c_str(), entry.message.c_str());
+        ImGui::TextWrapped("%s:", entry.senderName.c_str());
         ImGui::PopStyleColor();
+        ImGui::SameLine(0.0f, ImGui::GetStyle().ItemSpacing.x);
+        ImGui::TextWrapped("%s", entry.message.c_str());
     }
 
     const bool wasAtBottom = ImGui::GetScrollY() >= ImGui::GetScrollMaxY() - 1.0f;

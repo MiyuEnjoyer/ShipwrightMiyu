@@ -19,7 +19,16 @@ void Anchor::SendPacket_ChatMessage(const std::string& message) {
     SendJsonToRemote(payload);
 
     const std::string ownName = CVarGetString(CVAR_REMOTE_ANCHOR("Name"), "");
-    ChatLog::AddMessage(ownClientId, ownName, 0.8f, 1.0f, 0.8f, message);
+
+    float r = 0.8f, g = 1.0f, b = 0.8f;
+    auto ownIt = clients.find(ownClientId);
+    if (ownIt != clients.end()) {
+        r = ownIt->second.color.r / 255.0f;
+        g = ownIt->second.color.g / 255.0f;
+        b = ownIt->second.color.b / 255.0f;
+    }
+
+    ChatLog::AddMessage(ownClientId, ownName, r, g, b, message);
 
     static const u16 chatSfxIds[] = {
         NA_SE_SY_MESSAGE_PASS,
