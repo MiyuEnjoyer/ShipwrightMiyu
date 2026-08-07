@@ -1455,298 +1455,381 @@ void StaticData::HintTable_Init() {
     |      JUNK HINT TEXT      |
     ---------------------------*/
 
-    hintTextTable[RHT_JUNK01] = HintText(CustomMessage("They say you must read the names of \"Special Deal\" shop items carefully.",
-                                            /*german*/ "Man erzählt sich, daß man die \"Sonderangebote\" in Läden sorgfältig lesen sollte!",
-                                            /*french*/ "Selon moi, les \"Offres spéciales\" sont parfois trompeuses... Lisez les attentivement!"));
-
-    hintTextTable[RHT_JUNK02] = HintText(CustomMessage("They say that Zelda is a poor leader.",
-                                            /*german*/ "Man erzählt sich, daß Zelda eine schlechte Anführerin sei.",
-                                            /*french*/ "Selon moi, Zelda ne ferait pas un bon monarque."));
-
-    hintTextTable[RHT_JUNK03] = HintText(CustomMessage("These hints can be quite useful. This is an exception.",
-                                            /*german*/ "Die Hinweise von uns Mythensteinen können sehr nützlich sein. Dies ist eine Ausnahme.",
-                                            /*french*/ "Ces indices sont très utiles, à l'exception de celui-ci."));
-
-    hintTextTable[RHT_JUNK04] = HintText(CustomMessage("They say that the Lizalfos in Dodongo's Cavern like to play in lava.",
-                                            /*german*/ "Man erzählt sich, daß die Echsalfos in Dodongos Höhle gerne in Lava spielen.",
-                                            /*french*/ "Selon moi, les Lézalfos de la Caverne Dodongo aiment patauger dans la lave."));
-
-    hintTextTable[RHT_JUNK05] = HintText(CustomMessage("They say that all the Zora drowned in Wind Waker.",
-                                            /*german*/ "Man erzählt sich, daß alle Zoras in Wind Waker ertrunken wären.",
-                                            /*french*/ "Selon moi, les Zoras se sont noyés dans Wind Waker."));
-
-    hintTextTable[RHT_JUNK06] = HintText(CustomMessage("If Gorons eat rocks, does that mean I'm in danger?",
-                                            /*german*/ "Da Goronen Steine essen… heißt das, ich sollte mir Sorgen machen?",
-                                            /*french*/ "Ne dis pas au Gorons que je suis ici. Ils mangent des roches, tu sais!"));
-
-    hintTextTable[RHT_JUNK07] = HintText(CustomMessage("'Member when Ganon was a blue pig?^I 'member.",
-                                            /*german*/ "Weißte noch als Ganon nur n' blaues Schwein war?^Damals war alles besser. Kein unnötiger Schnickschnack!",
-                                            /*french*/ "Dans mon temps, Ganon était un cochon bleu...^Pff! Les jeunes de nos jours, et leur Ganondorf!"));
-
-    hintTextTable[RHT_JUNK08] = HintText(CustomMessage("One who does not have Triforce can't go in.",
-                                            /*german*/ "Jemand, der nicht im Besitz des Triforce ist, darf nicht eintreten!",
-                                            /*french*/ "Ceux sans Triforce doivent rebrousser chemin."));
-
-    hintTextTable[RHT_JUNK09] = HintText(CustomMessage("Save your future, end the Happy Mask Salesman.",
-                                            /*german*/ "Rette die Zukunft, stoppe den Maskenhändler solange Du noch kannst.",
-                                            /*french*/ "Selon moi, tu t'éviteras des jours de malheur si tu vaincs le vendeur de masques..."));
-
-    hintTextTable[RHT_JUNK10] = HintText(CustomMessage("Glitches are a pathway to many abilities some consider to be... Unnatural.",
-                                            /*german*/ "Glitches ermöglichen viele Fähigkeiten, die manche als... unnatürlich betrachten würden.",
-                                            /*french*/ "Les glitchs sont un moyen d'acquérir de nombreuses facultés considérées par certains comme... contraire "));
-
-    hintTextTable[RHT_JUNK11] = HintText(CustomMessage("I'm stoned. Get it?",
-                                            /*german*/ "Ich bin stoned. Verstehst du?",
-                                            /*french*/ "J'ai été pétrifié.&Tu as compris?"));
-
-    hintTextTable[RHT_JUNK12] = HintText(CustomMessage("Hoot! Hoot! Would you like me to repeat that?",
-                                            /*german*/ "Uhuuu! Uhu! Soll ich mich noch einmal wiederholen?",
-                                            /*french*/ "Hou hou! Veux-tu que je répète tout ça?"));
-
-    hintTextTable[RHT_JUNK13] = HintText(CustomMessage("Gorons are stupid. They eat rocks.",
-                                            /*german*/ "Goronen sind doof. Sie essen Felsen.",
-                                            /*french*/ "Les Gorons sont des vraies têtes dures."));
-
-    hintTextTable[RHT_JUNK14] = HintText(CustomMessage("They say that Lon Lon Ranch prospered under Ingo.",
-                                            /*german*/ "Man erzählt sich, daß Basil der Lon Lon-Farm zu neuem Glanz verholfen hat.",
-                                            /*french*/ "Selon moi, le Ranch Lon Lon était plus prospère sous Ingo."));
-
-    hintTextTable[RHT_JUNK15] = HintText(CustomMessage("They say without the Lens of Truth, the Treasure Chest Mini-Game is a 1 out of 32 chance.^Good luck!",
-                                            /*german*/ "Man erzählt sich, daß Du ohne das Auge der Wahrheit bei der Truhenlotterie nur eine 1-zu-32-Chance hast.^Na dann, viel Glück.",
-                                            /*french*/ "Selon moi, les chances de gagner la Chasse-aux-Trésors sans Monocle de Vérité est de 1 chance sur 32.^Bonne chance!"));
-
-    hintTextTable[RHT_JUNK16] = HintText(CustomMessage("Use bombs wisely.",
-                                            /*german*/ "Setze Bomben mit Bedacht ein.",
-                                            /*french*/ "Utilise les bombes avec précaution."));
-
-    hintTextTable[RHT_JUNK17] = HintText(CustomMessage("They say that players who select the \"ON\" option for \"MOTION CONTROL\" are the real \"Zelda players!\"",
-                                            /*german*/ "Man erzählt sich, daß Spieler, die die Option \"BEWEGUNGSSTEUERUNG\" auf \"EIN\" stellen, die wahren \"Zelda-Spieler\" sind.",
-                                            /*french*/ "Selon moi, ceux qui utilisent les contrôles gyroscopiques sont les VRAIS joueurs."));
-
-    hintTextTable[RHT_JUNK18] = HintText(CustomMessage("L2P @.",
-                                            /*german*/ "Lern zu spielen, @.",
-                                            /*french*/ "Arrête de lire les indices et joue comme un grand, @."));
-
-    hintTextTable[RHT_JUNK19] = HintText(CustomMessage("I bet you'd like to have more bombs.",
-                                            /*german*/ "Möchtest Du zur Strafe mehr Bomben tragen können?",
-                                            /*french*/ "Je parie que tu veux plus de bombes."));
-
-    hintTextTable[RHT_JUNK20] = HintText(CustomMessage("When all else fails, use Fire.",
-                                            /*german*/ "Wenn alles andere scheitert, benutze Feuer.",
-                                            /*french*/ "Quand rien ne marche, utilise le feu."));
-
-    hintTextTable[RHT_JUNK21] = HintText(CustomMessage("Here's a hint, @. Don't be bad.",
-                                            /*german*/ "Hier ein Tipp, @: Sei nicht so schlecht.",
-                                            /*french*/ "Selon moi, la #Triforce# n'est pas dans le jeu... Duh!"));
-
-    hintTextTable[RHT_JUNK22] = HintText(CustomMessage("Game Over. Return of Ganon.",
-                                            /*german*/ "Game Over. Ganons Rückkehr.",
-                                            /*french*/ "Partie terminée. RETour de Ganon."));
-
-    hintTextTable[RHT_JUNK23] = HintText(CustomMessage("May the way of the Hero lead to the Triforce.",
-                                            /*german*/ "Möge der Weg des Helden zum Triforce führen.",
-                                            /*french*/ "Que le chemin du héros te mène à la Triforce."));
-
-    hintTextTable[RHT_JUNK24] = HintText(CustomMessage("Can't find an item? Scan an Amiibo.",
-                                            /*german*/ "Du kannst einen Gegenstand nicht finden? Scanne ein Amiibo.",
-                                            /*french*/ "Tu cherches de quoi? Utilise un Amiibo!"));
-
-    hintTextTable[RHT_JUNK25] = HintText(CustomMessage("They say this game has just a few glitches.",
-                                            /*german*/ "Man erzählt sich, daß dieses Spiel nur ein paar Glitches hat.",
-                                            /*french*/ "Selon moi, ce jeu est complètement exempt de glitchs."));
-
-    hintTextTable[RHT_JUNK26] = HintText(CustomMessage("BRRING BRRING This is Ulrira. Wrong number?",
-                                            /*german*/ "TUUUUT! TUUUUT! Ja? Hier Ulrira! Muss sich wohl verwählt haben.",
-                                            /*french*/ "DRING DRING!! Pépé le Ramollo à l'appareil... Quoi? Faux numéro?"));
-
-    hintTextTable[RHT_JUNK27] = HintText(CustomMessage("Tingle Tingle Kooloo Limpah!",
-                                            /*german*/ "Tingle Tingle Kuuluu-Limpah!",
-                                            /*french*/ "Tingle! Tingle! Kooloolin... Pah!"));
-
-    hintTextTable[RHT_JUNK28] = HintText(CustomMessage("L is real 2401",
-                                            /*german*/ "L is real 2401",
-                                            /*french*/ "L is real 2401"));
-
-    hintTextTable[RHT_JUNK29] = HintText(CustomMessage("They say that Ganondorf will appear in the next Mario Tennis.",
-                                            /*german*/ "Man erzählt sich, daß Ganondorf im nächsten Mario Tennis erscheinen wird.",
-                                            /*french*/ "Selon moi, Ganondorf sera la nouvelle recrue dans Mario Tennis."));
-
-    hintTextTable[RHT_JUNK30] = HintText(CustomMessage("They say Medigoron sells the earliest Breath of the Wild demo.",
-                                            /*german*/ "Man erzählt sich, daß Medigoron die früheste Breath of the Wild-Demo verkauft.",
-                                            /*french*/ "Selon moi, Medigoron vend une démo de #Breath of the Wild#."));
-
-    hintTextTable[RHT_JUNK31] = HintText(CustomMessage("Can you move me? I don't get great service here.",
-                                            /*german*/ "Kannst Du mich bewegen? Ich habe schlechten Empfang.",
-                                            /*french*/ "Peux-tu me déplacer? J'ai pas une bonne réception ici."));
-
-    hintTextTable[RHT_JUNK32] = HintText(CustomMessage("They say if you use Strength on the truck, you can find Mew.",
-                                            /*german*/ "Man erzählt sich, daß man mit Stärke, unter dem Truck Mew finden kann.",
-                                            /*french*/ "Selon moi, #Mew# se trouve dessous le camion... Duh!"));
-
-    hintTextTable[RHT_JUNK33] = HintText(CustomMessage("I'm a helpful hint Gossip Stone!^See, I'm helping.",
-                                            /*german*/ "Ich bin ein hilfreicher Mythenstein!^Siehst du? Ich helfe.",
-                                            /*french*/ "Salut! Je suis une pierre de bons conseils!^Tiens, tu vois? J'aide bien, hein?"));
-
-    hintTextTable[RHT_JUNK34] = HintText(CustomMessage("Dear @, please come to the castle. I've baked a cake for you.&Yours truly, Princess Zelda.",
-                                            /*german*/ "Lieber @!&Komm mich doch einmal im Schloß besuchen! Der Kuchen steht bereit!&In Freundschaft, Prinzessin Zelda.",
-                                            /*french*/ "Mon très cher @:&Viens vite au château, je t'ai préparé&un délicieux gâteau...^À bientôt, Princesse Zelda"));
-
-    hintTextTable[RHT_JUNK35] = HintText(CustomMessage("They say all toasters toast toast.",
-                                            /*german*/ "Man erzählt sich, daß alle Toaster Toast toasten.",
-                                            /*french*/ "Selon moi, les grille-pains grillent du pain."));
-
-    hintTextTable[RHT_JUNK36] = HintText(CustomMessage("You thought it would be a useful hint, but it was me, junk hint!",
-                                            /*german*/ "Du dachtest dies wäre ein nützlicher Hinweis. Doch hier bin ich, der Müll-Hinweis!",
-                                            /*french*/ "Tu t'attendais à un bon indice... Mais c'était moi, un mauvais indice!"));
-
-    hintTextTable[RHT_JUNK37] = HintText(CustomMessage("They say that quest guidance can be found at a talking rock.",
-                                            /*german*/ "Man erzählt sich, daß man Quest-Hinweise bei einem sprechenden Stein finden kann.",
-                                            /*french*/ "Selon moi, des #indices# se trouvent auprès d'une pierre parlante... Duh!"));
-
-    hintTextTable[RHT_JUNK38] = HintText(CustomMessage("They say that the final item you're looking for can be found somewhere in Hyrule.",
-                                            /*german*/ "Man erzählt sich, daß der letzte Gegenstand nachdem Du gerade suchst, irgendwo in Hyrule zu finden sei.",
-                                            /*french*/ "Selon moi, le #dernier objet# se trouve quelque part dans Hyrule... Duh!"));
-
-    hintTextTable[RHT_JUNK39] = HintText(CustomMessage("Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.",
-                                            /*german*/ "Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.",
-                                            /*french*/ "Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip."));
-
-    hintTextTable[RHT_JUNK40] = HintText(CustomMessage("They say that Barinade fears Deku Nuts.",
-                                            /*german*/ "Man erzählt sich, daß Barinade Angst vor Deku-Nüssen hat.",
-                                            /*french*/ "Selon moi, Barinade a la frousse des noix Mojo."));
-
-    hintTextTable[RHT_JUNK41] = HintText(CustomMessage("They say that Flare Dancers do not fear Goron-crafted blades.",
-                                            /*german*/ "Man erzählt sich, daß Flammenderwische keine Angst vor goronengeschmiedeten Klingen haben.",
-                                            /*french*/ "Selon moi, le danse-flamme n'a pas peur des armes de Goron."));
-
-    hintTextTable[RHT_JUNK42] = HintText(CustomMessage("They say that Morpha is easily trapped in a corner.",
-                                            /*german*/ "Man erzählt sich, daß man Morpha ganz leicht in die Ecke drängen kann.",
-                                            /*french*/ "Selon moi, Morpha est facilement coincé."));
-
-    hintTextTable[RHT_JUNK43] = HintText(CustomMessage("They say that Bongo Bongo really hates the cold.",
-                                            /*german*/ "Man erzählt sich, daß Bongo Bongo die Kälte wirklich hasst.",
-                                            /*french*/ "Selon moi, Bongo Bongo a facilement froid aux doigts."));
-
-    hintTextTable[RHT_JUNK44] = HintText(CustomMessage("They say that your sword is most powerful when you put it away.",
-                                            /*german*/ "Man erzählt sich, daß Dein Schwert am mächtigsten ist, wenn Du es wegsteckst.",
-                                            /*french*/ "Selon moi, ton épée est à pleine puissance quand tu la rengaines."));
-
-    hintTextTable[RHT_JUNK45] = HintText(CustomMessage("They say that bombing the hole Volvagia last flew into can be rewarding.",
-                                            /*german*/ "Man erzählt sich, daß es sich lohnt das Loch zu bombardieren, in das Volvagia zuletzt geflogen ist.",
-                                            /*french*/ "Selon moi, le trou où se creuse Volvagia est vulnérable aux bombes."));
-
-    hintTextTable[RHT_JUNK46] = HintText(CustomMessage("They say that invisible ghosts can be exposed with Deku Nuts.",
-                                            /*german*/ "Man erzählt sich, daß unsichtbare Geister mit Deku-Nüssen sichtbar gemacht werden können.",
-                                            /*french*/ "Selon moi, des fantômes invisibles apparaissent avec des noix Mojo."));
-
-    hintTextTable[RHT_JUNK47] = HintText(CustomMessage("They say that the real Phantom Ganon is bright and loud.",
-                                            /*german*/ "Man erzählt sich, daß der wahre Phantom-Ganon durch Helligkeit und Lärm auffällt.",
-                                            /*french*/ "Selon moi, le vrai spectre de Ganon est clair et bruyant."));
-
-    hintTextTable[RHT_JUNK48] = HintText(CustomMessage("They say that walking backwards is very fast.",
-                                            /*german*/ "Man erzählt sich, daß rückwärts laufen sehr schnell ist.",
-                                            /*french*/ "Selon moi, tu fais marche arrière très rapidement pour un héros."));
-
-    hintTextTable[RHT_JUNK49] = HintText(CustomMessage("They say Ingo is not very good at planning ahead.",
-                                            /*german*/ "Man erzählt sich, daß Basil nicht besonders gut darin ist vorauszuplanen.",
-                                            /*french*/ "Selon moi, Ingo ne fait pas un très bon geôlier."));
-
-    hintTextTable[RHT_JUNK50] = HintText(CustomMessage("You found a spiritual Stone! By which I mean, I worship Nayru.",
-                                            /*german*/ "Du hast einen Heiligen Stein gefunden!^Also... eigentlich heißt das nur, daß ich Nayru verehre.",
-                                            /*french*/ "Vous avez trouvé une Pierre Ancestrale! En effet, je vénère la déesse Hylia."));
-
-    hintTextTable[RHT_JUNK51] = HintText(CustomMessage("Open your eyes.^Open your eyes.^Wake up, @.",
-                                            /*german*/ "Öffne die Augen...^Öffne die Augen...^Wach auf, @.",
-                                            /*french*/ "Réveille-toi...^Réveille-toi.^Ouvre les yeux, @."));
-
-    hintTextTable[RHT_JUNK52] = HintText(CustomMessage("They say that the Nocturne of Shadow can bring you very close to Ganon.",
-                                            /*german*/ "Man erzählt sich, daß die Nocturne des Schattens dich Ganon sehr nahe bringen kann.",
-                                            /*french*/ "Selon moi, le Nocturne de l'Ombre peut t'amener très près de Ganon."));
-
-    hintTextTable[RHT_JUNK53] = HintText(CustomMessage("They say that Twinrova always casts the same spell the first three times.",
-                                            /*german*/ "Man erzählt sich, daß Twinrova die ersten drei Male immer denselben Zauber benutzt.",
-                                            /*french*/ "Selon moi, le Duo Maléfique lance toujours les mêmes trois premiers sorts."));
-
-    hintTextTable[RHT_JUNK54] = HintText(CustomMessage("They say that the nightly builds may be unstable.",
-                                            /*german*/ "Man erzählt sich, daß die \"Nightly Builds\" instabil sein könnten.",
-                                            /*french*/ "Selon moi, les \"nightly builds\" peuvent être instables."));
-
-    hintTextTable[RHT_JUNK55] = HintText(CustomMessage("You're playing a Randomizer. I'm randomized!^Here's a random number:  #4#.&Enjoy your Randomizer!",
-                                            /*german*/ "Du spielst einen Randomizer. Ich wurde zufällig generiert!^Hier ist eine zufällige Zahl:  #4#.&Viel Spaß mit dem Randomizer!",
-                                            /*french*/ "Tu joues à un randomizer. Je suis aléatoire!^Voici un nombre aléatoire: #4#.&Bonne partie!"));
-
-    hintTextTable[RHT_JUNK56] = HintText(CustomMessage("They say Ganondorf's bolts can be reflected with glass or steel.",
-                                            /*german*/ "Man erzählt sich, daß man Ganondorfs Blitze mit Glas oder Stahl reflektieren kann.",
-                                            /*french*/ "Selon moi, les éclairs de Ganon se reflètent sur l'acier et le verre."));
-
-    hintTextTable[RHT_JUNK57] = HintText(CustomMessage("They say Ganon's tail is vulnerable to nuts, arrows, swords, explosives, hammers...^...sticks, seeds, "
-                                                       "boomerangs...^...rods, shovels, iron balls, angry bees...",
-                                            /*german*/ "Man erzählt sich, Ganons Schwanz sei verwundbar durch Nüsse, Pfeile, Schwerter...^...Explosives, Hämmer, "
-													   "Stöcke...^...Kerne, Bumerangs, Schaufeln, Eisenkugeln, wütende Bienen...",
-                                            /*french*/ "Selon moi, la queue de Ganon est vulnérable aux noix, flèches, épées, bombes, marteaux...^...bâtons, "
-                                                       "graines, boomerangs...^...baguettes, pelles, boulets de fer, abeilles enragées..."));
-
-    hintTextTable[RHT_JUNK58] = HintText(CustomMessage("They say that you're wasting time reading this hint, but I disagree. Talk to me again!",
-                                            /*german*/ "Man erzählt sich, daß Du deine Zeit mit dem Lesen dieses Hinweises verschwendest, aber ich bin anderer Meinung. Sprich noch einmal mit mir.",
-                                            /*french*/ "Selon moi... tu sais quoi? Parle-moi encore, et je te le dirai!"));
-
-    hintTextTable[RHT_JUNK59] = HintText(CustomMessage("They say Ganondorf knows where to find the instrument of his doom.",
-                                            /*german*/ "Man erzählt sich, daß Ganondorf weiß, wo man das Instrument seines Untergangs finden kann.",
-                                            /*french*/ "Selon moi, Ganondorf sait où il a caché son point faible."));
-
-    hintTextTable[RHT_JUNK60] = HintText(CustomMessage("I heard @ is pretty good at Zelda.",
-                                            /*german*/ "Ich habe gehört, daß @ ziemlich gut in Zelda Spielen ist.",
-                                            /*french*/ "Apparemment, @ est super bon à Zelda."));
-
-    hintTextTable[RHT_JUNK61] = HintText(CustomMessage("Hi @, we've been trying to reach you about your car's extended warranty. ",
-                                            /*german*/ "Hallo @, wir haben versucht, Dich wegen der erweiterten Garantie für Dein Auto zu erreichen.",
-                                            /*french*/ "Bonjour, @. Vous avez une voiture? Vous savez, nous offrons des assurances abordables..."));
-
-    hintTextTable[RHT_JUNK62] = HintText(CustomMessage("They say that it's actually possible to beat the running man.",
-                                            /*german*/ "Man erzählt sich, daß es tatsächlich möglich sei, den Marathon-Läufer zu besiegen.",
-                                            /*french*/ "Selon moi, il est possible de battre le coureur.&Donc, tu prends ton arc, et..."));
-
-    hintTextTable[RHT_JUNK63] = HintText(CustomMessage("They say this hint makes more sense in other languages.",
-                                            /*german*/ "Man erzählt sich, daß dieser Hinweis in anderen Sprachen mehr Sinn macht.",
-                                            /*french*/ "Selon moi, ces indices auraient pu être mieux traduits... Duh!"));
-
-    // ^ Junk hints above are from 3drando
-    // v Junk hints below are new to soh rando
-
-    // Please keep hints to stuff related to ship directly, or to Nintendo/Zelda related stuff.
-    // And nothing that's super obscure that no one's going to understand.
-
-    hintTextTable[RHT_JUNK64] = HintText(CustomMessage("They say Greg is special.",
-                                            /*german*/ "Man erzählt sich, daß Greg etwas Besonderes ist.",
-                                            /*french*/ "Selon moi, Greg est spécial."));
-
-    hintTextTable[RHT_JUNK65] = HintText(CustomMessage("They say the longer the Goron's neck, the wiser they are.",
-                                            /*german*/ "Man erzählt sich, daß ein Gorone umso weiser wird, je länger sein Hals ist.",
-                                            /*french*/ "Selon moi, plus le cou des Gorons est long, plus ils sont sage." ));
-
-    hintTextTable[RHT_JUNK66] = HintText(CustomMessage("They say this ship is what all true gamers strive for.",
-                                            /*german*/ "Man erzählt sich, daß dieses \"Ship\" das ist, wonach alle echten Gamer streben.",
-                                            /*french*/ "Selon moi, cette version du port est ce pour quoi luttent tous les vrais gamers."));
-
-    hintTextTable[RHT_JUNK67] = HintText(CustomMessage("They say that Glowsticks can be found in the Raveyard.",
-                                            /*german*/ "Man erzählt sich, daß Leuchtstäbe auf dem Partyfriedhof zu finden wären.",
-                                            /*french*/ "Selon moi, on peut trouver des Bâtons Lumineux sur le dancefloor du cimetière."));
-
-    hintTextTable[RHT_JUNK68] = HintText(CustomMessage("They say @'s uncle works for Nintendo.",
-                                            /*german*/ "Man erzählt sich, daß @'s Onkel bei Nintendo arbeitet.",
-                                            /*french*/ "Selon moi, l'oncle de @ travaille chez Nintendo."));
-
-    hintTextTable[RHT_JUNK69] = HintText(CustomMessage("They say pulling all gravestones in the graveyard leads to something magical.",
-                                            /*german*/ "Man erzählt sich, daß das Ziehen aller Grabsteine auf dem Friedhof zu etwas Magischem führe.",
-                                            /*french*/ "Selon moi, tirer toutes les tombes du Cimetière déclanche un truc magique."));
-
-    hintTextTable[RHT_JUNK70] = HintText(CustomMessage("They say holding L while pausing makes you win the game.",
-                                            /*german*/ "Man erzählt sich, daß man das Spiel gewinnt, wenn man L gedrückt hält, während man pausiert.",
-                                            /*french*/ "Selon moi, maintenir L pendant que vous appuyez sur START vous permet de terminer le jeu."));
-
-    hintTextTable[RHT_JUNK71] = HintText(CustomMessage("They say @'s body is ready.",
-                                            /*german*/ "Man erzählt sich... nein weißt Du was, ich habe keine Lust mehr.",
-                                            /*french*/ "Selon moi, ce junk hint ne se traduirait pas bien en français."));
+    hintTextTable[RHT_JUNK01] = HintText(CustomMessage("They say that Sensei of Schale has a big butt.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK02] = HintText(CustomMessage("I saw Sensei of Schale with HER&and they were doing THAT.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK03] = HintText(CustomMessage("They say that Cheerleader Hanae&will never be released.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK04] = HintText(CustomMessage("bing",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK05] = HintText(CustomMessage("They say that EoS is near.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK06] = HintText(CustomMessage("Unfortunately, this is a Junko hint!",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK07] = HintText(CustomMessage("EoS EoS EoS EoS EoS EoS^EoS EoS EoS EoS EoS EoS^EoS EoS EoS EoS EoS EoS^EoS EoS EoS EoS EoS EoS^EoS EoS EoS EoS EoS EoS^EoS EoS EoS EoS EoS EoS^",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK08] = HintText(CustomMessage("They say @ will lose the 50/50.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK09] = HintText(CustomMessage("They say that Chise is&very intelligent.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK10] = HintText(CustomMessage("Reminder: the Moi Cabal is not real.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK11] = HintText(CustomMessage("sha",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK12] = HintText(CustomMessage("iiwa",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK13] = HintText(CustomMessage("dskd",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK14] = HintText(CustomMessage("14 * 5 - 6 * 4 + 21",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK15] = HintText(CustomMessage("MINASAN TANOSHISOU DESUNE",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK16] = HintText(CustomMessage("Nothing happened on 8/31.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK17] = HintText(CustomMessage("WE'RE DOOMED",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK18] = HintText(CustomMessage("It might not seem like it,&but this is a Kasumi general.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK19] = HintText(CustomMessage("It might not seem like it,&but this is a Hasumi general.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+    hintTextTable[RHT_JUNK20] = HintText(CustomMessage("They say the real Tsuchinoko&is the friends we made along&the way.",
+                                            /*german*/ ".",
+                                            /*french*/ "."));
+
+
+    // ---- Original junk hints, kept for reference (disabled) ----
+
+//     hintTextTable[RHT_JUNK01] = HintText(CustomMessage("They say you must read the names of \"Special Deal\" shop items carefully.",
+//                                             /*german*/ "Man erzählt sich, daß man die \"Sonderangebote\" in Läden sorgfältig lesen sollte!",
+//                                             /*french*/ "Selon moi, les \"Offres spéciales\" sont parfois trompeuses... Lisez les attentivement!"));
+
+//     hintTextTable[RHT_JUNK02] = HintText(CustomMessage("They say that Zelda is a poor leader.",
+//                                             /*german*/ "Man erzählt sich, daß Zelda eine schlechte Anführerin sei.",
+//                                             /*french*/ "Selon moi, Zelda ne ferait pas un bon monarque."));
+
+//     hintTextTable[RHT_JUNK03] = HintText(CustomMessage("These hints can be quite useful. This is an exception.",
+//                                             /*german*/ "Die Hinweise von uns Mythensteinen können sehr nützlich sein. Dies ist eine Ausnahme.",
+//                                             /*french*/ "Ces indices sont très utiles, à l'exception de celui-ci."));
+
+//     hintTextTable[RHT_JUNK04] = HintText(CustomMessage("They say that the Lizalfos in Dodongo's Cavern like to play in lava.",
+//                                             /*german*/ "Man erzählt sich, daß die Echsalfos in Dodongos Höhle gerne in Lava spielen.",
+//                                             /*french*/ "Selon moi, les Lézalfos de la Caverne Dodongo aiment patauger dans la lave."));
+
+//     hintTextTable[RHT_JUNK05] = HintText(CustomMessage("They say that all the Zora drowned in Wind Waker.",
+//                                             /*german*/ "Man erzählt sich, daß alle Zoras in Wind Waker ertrunken wären.",
+//                                             /*french*/ "Selon moi, les Zoras se sont noyés dans Wind Waker."));
+
+//     hintTextTable[RHT_JUNK06] = HintText(CustomMessage("If Gorons eat rocks, does that mean I'm in danger?",
+//                                             /*german*/ "Da Goronen Steine essen… heißt das, ich sollte mir Sorgen machen?",
+//                                             /*french*/ "Ne dis pas au Gorons que je suis ici. Ils mangent des roches, tu sais!"));
+
+//     hintTextTable[RHT_JUNK07] = HintText(CustomMessage("'Member when Ganon was a blue pig?^I 'member.",
+//                                             /*german*/ "Weißte noch als Ganon nur n' blaues Schwein war?^Damals war alles besser. Kein unnötiger Schnickschnack!",
+//                                             /*french*/ "Dans mon temps, Ganon était un cochon bleu...^Pff! Les jeunes de nos jours, et leur Ganondorf!"));
+
+//     hintTextTable[RHT_JUNK08] = HintText(CustomMessage("One who does not have Triforce can't go in.",
+//                                             /*german*/ "Jemand, der nicht im Besitz des Triforce ist, darf nicht eintreten!",
+//                                             /*french*/ "Ceux sans Triforce doivent rebrousser chemin."));
+
+//     hintTextTable[RHT_JUNK09] = HintText(CustomMessage("Save your future, end the Happy Mask Salesman.",
+//                                             /*german*/ "Rette die Zukunft, stoppe den Maskenhändler solange Du noch kannst.",
+//                                             /*french*/ "Selon moi, tu t'éviteras des jours de malheur si tu vaincs le vendeur de masques..."));
+
+//     hintTextTable[RHT_JUNK10] = HintText(CustomMessage("Glitches are a pathway to many abilities some consider to be... Unnatural.",
+//                                             /*german*/ "Glitches ermöglichen viele Fähigkeiten, die manche als... unnatürlich betrachten würden.",
+//                                             /*french*/ "Les glitchs sont un moyen d'acquérir de nombreuses facultés considérées par certains comme... contraire "));
+
+//     hintTextTable[RHT_JUNK11] = HintText(CustomMessage("I'm stoned. Get it?",
+//                                             /*german*/ "Ich bin stoned. Verstehst du?",
+//                                             /*french*/ "J'ai été pétrifié.&Tu as compris?"));
+
+//     hintTextTable[RHT_JUNK12] = HintText(CustomMessage("Hoot! Hoot! Would you like me to repeat that?",
+//                                             /*german*/ "Uhuuu! Uhu! Soll ich mich noch einmal wiederholen?",
+//                                             /*french*/ "Hou hou! Veux-tu que je répète tout ça?"));
+
+//     hintTextTable[RHT_JUNK13] = HintText(CustomMessage("Gorons are stupid. They eat rocks.",
+//                                             /*german*/ "Goronen sind doof. Sie essen Felsen.",
+//                                             /*french*/ "Les Gorons sont des vraies têtes dures."));
+
+//     hintTextTable[RHT_JUNK14] = HintText(CustomMessage("They say that Lon Lon Ranch prospered under Ingo.",
+//                                             /*german*/ "Man erzählt sich, daß Basil der Lon Lon-Farm zu neuem Glanz verholfen hat.",
+//                                             /*french*/ "Selon moi, le Ranch Lon Lon était plus prospère sous Ingo."));
+
+//     hintTextTable[RHT_JUNK15] = HintText(CustomMessage("They say without the Lens of Truth, the Treasure Chest Mini-Game is a 1 out of 32 chance.^Good luck!",
+//                                             /*german*/ "Man erzählt sich, daß Du ohne das Auge der Wahrheit bei der Truhenlotterie nur eine 1-zu-32-Chance hast.^Na dann, viel Glück.",
+//                                             /*french*/ "Selon moi, les chances de gagner la Chasse-aux-Trésors sans Monocle de Vérité est de 1 chance sur 32.^Bonne chance!"));
+
+//     hintTextTable[RHT_JUNK16] = HintText(CustomMessage("Use bombs wisely.",
+//                                             /*german*/ "Setze Bomben mit Bedacht ein.",
+//                                             /*french*/ "Utilise les bombes avec précaution."));
+
+//     hintTextTable[RHT_JUNK17] = HintText(CustomMessage("They say that players who select the \"ON\" option for \"MOTION CONTROL\" are the real \"Zelda players!\"",
+//                                             /*german*/ "Man erzählt sich, daß Spieler, die die Option \"BEWEGUNGSSTEUERUNG\" auf \"EIN\" stellen, die wahren \"Zelda-Spieler\" sind.",
+//                                             /*french*/ "Selon moi, ceux qui utilisent les contrôles gyroscopiques sont les VRAIS joueurs."));
+
+//     hintTextTable[RHT_JUNK18] = HintText(CustomMessage("L2P @.",
+//                                             /*german*/ "Lern zu spielen, @.",
+//                                             /*french*/ "Arrête de lire les indices et joue comme un grand, @."));
+
+//     hintTextTable[RHT_JUNK19] = HintText(CustomMessage("I bet you'd like to have more bombs.",
+//                                             /*german*/ "Möchtest Du zur Strafe mehr Bomben tragen können?",
+//                                             /*french*/ "Je parie que tu veux plus de bombes."));
+
+//     hintTextTable[RHT_JUNK20] = HintText(CustomMessage("When all else fails, use Fire.",
+//                                             /*german*/ "Wenn alles andere scheitert, benutze Feuer.",
+//                                             /*french*/ "Quand rien ne marche, utilise le feu."));
+
+//     hintTextTable[RHT_JUNK21] = HintText(CustomMessage("Here's a hint, @. Don't be bad.",
+//                                             /*german*/ "Hier ein Tipp, @: Sei nicht so schlecht.",
+//                                             /*french*/ "Selon moi, la #Triforce# n'est pas dans le jeu... Duh!"));
+
+//     hintTextTable[RHT_JUNK22] = HintText(CustomMessage("Game Over. Return of Ganon.",
+//                                             /*german*/ "Game Over. Ganons Rückkehr.",
+//                                             /*french*/ "Partie terminée. RETour de Ganon."));
+
+//     hintTextTable[RHT_JUNK23] = HintText(CustomMessage("May the way of the Hero lead to the Triforce.",
+//                                             /*german*/ "Möge der Weg des Helden zum Triforce führen.",
+//                                             /*french*/ "Que le chemin du héros te mène à la Triforce."));
+
+//     hintTextTable[RHT_JUNK24] = HintText(CustomMessage("Can't find an item? Scan an Amiibo.",
+//                                             /*german*/ "Du kannst einen Gegenstand nicht finden? Scanne ein Amiibo.",
+//                                             /*french*/ "Tu cherches de quoi? Utilise un Amiibo!"));
+
+//     hintTextTable[RHT_JUNK25] = HintText(CustomMessage("They say this game has just a few glitches.",
+//                                             /*german*/ "Man erzählt sich, daß dieses Spiel nur ein paar Glitches hat.",
+//                                             /*french*/ "Selon moi, ce jeu est complètement exempt de glitchs."));
+
+//     hintTextTable[RHT_JUNK26] = HintText(CustomMessage("BRRING BRRING This is Ulrira. Wrong number?",
+//                                             /*german*/ "TUUUUT! TUUUUT! Ja? Hier Ulrira! Muss sich wohl verwählt haben.",
+//                                             /*french*/ "DRING DRING!! Pépé le Ramollo à l'appareil... Quoi? Faux numéro?"));
+
+//     hintTextTable[RHT_JUNK27] = HintText(CustomMessage("Tingle Tingle Kooloo Limpah!",
+//                                             /*german*/ "Tingle Tingle Kuuluu-Limpah!",
+//                                             /*french*/ "Tingle! Tingle! Kooloolin... Pah!"));
+
+//     hintTextTable[RHT_JUNK28] = HintText(CustomMessage("L is real 2401",
+//                                             /*german*/ "L is real 2401",
+//                                             /*french*/ "L is real 2401"));
+
+//     hintTextTable[RHT_JUNK29] = HintText(CustomMessage("They say that Ganondorf will appear in the next Mario Tennis.",
+//                                             /*german*/ "Man erzählt sich, daß Ganondorf im nächsten Mario Tennis erscheinen wird.",
+//                                             /*french*/ "Selon moi, Ganondorf sera la nouvelle recrue dans Mario Tennis."));
+
+//     hintTextTable[RHT_JUNK30] = HintText(CustomMessage("They say Medigoron sells the earliest Breath of the Wild demo.",
+//                                             /*german*/ "Man erzählt sich, daß Medigoron die früheste Breath of the Wild-Demo verkauft.",
+//                                             /*french*/ "Selon moi, Medigoron vend une démo de #Breath of the Wild#."));
+
+//     hintTextTable[RHT_JUNK31] = HintText(CustomMessage("Can you move me? I don't get great service here.",
+//                                             /*german*/ "Kannst Du mich bewegen? Ich habe schlechten Empfang.",
+//                                             /*french*/ "Peux-tu me déplacer? J'ai pas une bonne réception ici."));
+
+//     hintTextTable[RHT_JUNK32] = HintText(CustomMessage("They say if you use Strength on the truck, you can find Mew.",
+//                                             /*german*/ "Man erzählt sich, daß man mit Stärke, unter dem Truck Mew finden kann.",
+//                                             /*french*/ "Selon moi, #Mew# se trouve dessous le camion... Duh!"));
+
+//     hintTextTable[RHT_JUNK33] = HintText(CustomMessage("I'm a helpful hint Gossip Stone!^See, I'm helping.",
+//                                             /*german*/ "Ich bin ein hilfreicher Mythenstein!^Siehst du? Ich helfe.",
+//                                             /*french*/ "Salut! Je suis une pierre de bons conseils!^Tiens, tu vois? J'aide bien, hein?"));
+
+//     hintTextTable[RHT_JUNK34] = HintText(CustomMessage("Dear @, please come to the castle. I've baked a cake for you.&Yours truly, Princess Zelda.",
+//                                             /*german*/ "Lieber @!&Komm mich doch einmal im Schloß besuchen! Der Kuchen steht bereit!&In Freundschaft, Prinzessin Zelda.",
+//                                             /*french*/ "Mon très cher @:&Viens vite au château, je t'ai préparé&un délicieux gâteau...^À bientôt, Princesse Zelda"));
+
+//     hintTextTable[RHT_JUNK35] = HintText(CustomMessage("They say all toasters toast toast.",
+//                                             /*german*/ "Man erzählt sich, daß alle Toaster Toast toasten.",
+//                                             /*french*/ "Selon moi, les grille-pains grillent du pain."));
+
+//     hintTextTable[RHT_JUNK36] = HintText(CustomMessage("You thought it would be a useful hint, but it was me, junk hint!",
+//                                             /*german*/ "Du dachtest dies wäre ein nützlicher Hinweis. Doch hier bin ich, der Müll-Hinweis!",
+//                                             /*french*/ "Tu t'attendais à un bon indice... Mais c'était moi, un mauvais indice!"));
+
+//     hintTextTable[RHT_JUNK37] = HintText(CustomMessage("They say that quest guidance can be found at a talking rock.",
+//                                             /*german*/ "Man erzählt sich, daß man Quest-Hinweise bei einem sprechenden Stein finden kann.",
+//                                             /*french*/ "Selon moi, des #indices# se trouvent auprès d'une pierre parlante... Duh!"));
+
+//     hintTextTable[RHT_JUNK38] = HintText(CustomMessage("They say that the final item you're looking for can be found somewhere in Hyrule.",
+//                                             /*german*/ "Man erzählt sich, daß der letzte Gegenstand nachdem Du gerade suchst, irgendwo in Hyrule zu finden sei.",
+//                                             /*french*/ "Selon moi, le #dernier objet# se trouve quelque part dans Hyrule... Duh!"));
+
+//     hintTextTable[RHT_JUNK39] = HintText(CustomMessage("Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.",
+//                                             /*german*/ "Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.^Mweep.",
+//                                             /*french*/ "Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip.^Mwip."));
+
+//     hintTextTable[RHT_JUNK40] = HintText(CustomMessage("They say that Barinade fears Deku Nuts.",
+//                                             /*german*/ "Man erzählt sich, daß Barinade Angst vor Deku-Nüssen hat.",
+//                                             /*french*/ "Selon moi, Barinade a la frousse des noix Mojo."));
+
+//     hintTextTable[RHT_JUNK41] = HintText(CustomMessage("They say that Flare Dancers do not fear Goron-crafted blades.",
+//                                             /*german*/ "Man erzählt sich, daß Flammenderwische keine Angst vor goronengeschmiedeten Klingen haben.",
+//                                             /*french*/ "Selon moi, le danse-flamme n'a pas peur des armes de Goron."));
+
+//     hintTextTable[RHT_JUNK42] = HintText(CustomMessage("They say that Morpha is easily trapped in a corner.",
+//                                             /*german*/ "Man erzählt sich, daß man Morpha ganz leicht in die Ecke drängen kann.",
+//                                             /*french*/ "Selon moi, Morpha est facilement coincé."));
+
+//     hintTextTable[RHT_JUNK43] = HintText(CustomMessage("They say that Bongo Bongo really hates the cold.",
+//                                             /*german*/ "Man erzählt sich, daß Bongo Bongo die Kälte wirklich hasst.",
+//                                             /*french*/ "Selon moi, Bongo Bongo a facilement froid aux doigts."));
+
+//     hintTextTable[RHT_JUNK44] = HintText(CustomMessage("They say that your sword is most powerful when you put it away.",
+//                                             /*german*/ "Man erzählt sich, daß Dein Schwert am mächtigsten ist, wenn Du es wegsteckst.",
+//                                             /*french*/ "Selon moi, ton épée est à pleine puissance quand tu la rengaines."));
+
+//     hintTextTable[RHT_JUNK45] = HintText(CustomMessage("They say that bombing the hole Volvagia last flew into can be rewarding.",
+//                                             /*german*/ "Man erzählt sich, daß es sich lohnt das Loch zu bombardieren, in das Volvagia zuletzt geflogen ist.",
+//                                             /*french*/ "Selon moi, le trou où se creuse Volvagia est vulnérable aux bombes."));
+
+//     hintTextTable[RHT_JUNK46] = HintText(CustomMessage("They say that invisible ghosts can be exposed with Deku Nuts.",
+//                                             /*german*/ "Man erzählt sich, daß unsichtbare Geister mit Deku-Nüssen sichtbar gemacht werden können.",
+//                                             /*french*/ "Selon moi, des fantômes invisibles apparaissent avec des noix Mojo."));
+
+//     hintTextTable[RHT_JUNK47] = HintText(CustomMessage("They say that the real Phantom Ganon is bright and loud.",
+//                                             /*german*/ "Man erzählt sich, daß der wahre Phantom-Ganon durch Helligkeit und Lärm auffällt.",
+//                                             /*french*/ "Selon moi, le vrai spectre de Ganon est clair et bruyant."));
+
+//     hintTextTable[RHT_JUNK48] = HintText(CustomMessage("They say that walking backwards is very fast.",
+//                                             /*german*/ "Man erzählt sich, daß rückwärts laufen sehr schnell ist.",
+//                                             /*french*/ "Selon moi, tu fais marche arrière très rapidement pour un héros."));
+
+//     hintTextTable[RHT_JUNK49] = HintText(CustomMessage("They say Ingo is not very good at planning ahead.",
+//                                             /*german*/ "Man erzählt sich, daß Basil nicht besonders gut darin ist vorauszuplanen.",
+//                                             /*french*/ "Selon moi, Ingo ne fait pas un très bon geôlier."));
+
+//     hintTextTable[RHT_JUNK50] = HintText(CustomMessage("You found a spiritual Stone! By which I mean, I worship Nayru.",
+//                                             /*german*/ "Du hast einen Heiligen Stein gefunden!^Also... eigentlich heißt das nur, daß ich Nayru verehre.",
+//                                             /*french*/ "Vous avez trouvé une Pierre Ancestrale! En effet, je vénère la déesse Hylia."));
+
+//     hintTextTable[RHT_JUNK51] = HintText(CustomMessage("Open your eyes.^Open your eyes.^Wake up, @.",
+//                                             /*german*/ "Öffne die Augen...^Öffne die Augen...^Wach auf, @.",
+//                                             /*french*/ "Réveille-toi...^Réveille-toi.^Ouvre les yeux, @."));
+
+//     hintTextTable[RHT_JUNK52] = HintText(CustomMessage("They say that the Nocturne of Shadow can bring you very close to Ganon.",
+//                                             /*german*/ "Man erzählt sich, daß die Nocturne des Schattens dich Ganon sehr nahe bringen kann.",
+//                                             /*french*/ "Selon moi, le Nocturne de l'Ombre peut t'amener très près de Ganon."));
+
+//     hintTextTable[RHT_JUNK53] = HintText(CustomMessage("They say that Twinrova always casts the same spell the first three times.",
+//                                             /*german*/ "Man erzählt sich, daß Twinrova die ersten drei Male immer denselben Zauber benutzt.",
+//                                             /*french*/ "Selon moi, le Duo Maléfique lance toujours les mêmes trois premiers sorts."));
+
+//     hintTextTable[RHT_JUNK54] = HintText(CustomMessage("They say that the nightly builds may be unstable.",
+//                                             /*german*/ "Man erzählt sich, daß die \"Nightly Builds\" instabil sein könnten.",
+//                                             /*french*/ "Selon moi, les \"nightly builds\" peuvent être instables."));
+
+//     hintTextTable[RHT_JUNK55] = HintText(CustomMessage("You're playing a Randomizer. I'm randomized!^Here's a random number:  #4#.&Enjoy your Randomizer!",
+//                                             /*german*/ "Du spielst einen Randomizer. Ich wurde zufällig generiert!^Hier ist eine zufällige Zahl:  #4#.&Viel Spaß mit dem Randomizer!",
+//                                             /*french*/ "Tu joues à un randomizer. Je suis aléatoire!^Voici un nombre aléatoire: #4#.&Bonne partie!"));
+
+//     hintTextTable[RHT_JUNK56] = HintText(CustomMessage("They say Ganondorf's bolts can be reflected with glass or steel.",
+//                                             /*german*/ "Man erzählt sich, daß man Ganondorfs Blitze mit Glas oder Stahl reflektieren kann.",
+//                                             /*french*/ "Selon moi, les éclairs de Ganon se reflètent sur l'acier et le verre."));
+
+//     hintTextTable[RHT_JUNK57] = HintText(CustomMessage("They say Ganon's tail is vulnerable to nuts, arrows, swords, explosives, hammers...^...sticks, seeds, "
+//                                                        "boomerangs...^...rods, shovels, iron balls, angry bees...",
+//                                             /*german*/ "Man erzählt sich, Ganons Schwanz sei verwundbar durch Nüsse, Pfeile, Schwerter...^...Explosives, Hämmer, "
+// 													   "Stöcke...^...Kerne, Bumerangs, Schaufeln, Eisenkugeln, wütende Bienen...",
+//                                             /*french*/ "Selon moi, la queue de Ganon est vulnérable aux noix, flèches, épées, bombes, marteaux...^...bâtons, "
+//                                                        "graines, boomerangs...^...baguettes, pelles, boulets de fer, abeilles enragées..."));
+
+//     hintTextTable[RHT_JUNK58] = HintText(CustomMessage("They say that you're wasting time reading this hint, but I disagree. Talk to me again!",
+//                                             /*german*/ "Man erzählt sich, daß Du deine Zeit mit dem Lesen dieses Hinweises verschwendest, aber ich bin anderer Meinung. Sprich noch einmal mit mir.",
+//                                             /*french*/ "Selon moi... tu sais quoi? Parle-moi encore, et je te le dirai!"));
+
+//     hintTextTable[RHT_JUNK59] = HintText(CustomMessage("They say Ganondorf knows where to find the instrument of his doom.",
+//                                             /*german*/ "Man erzählt sich, daß Ganondorf weiß, wo man das Instrument seines Untergangs finden kann.",
+//                                             /*french*/ "Selon moi, Ganondorf sait où il a caché son point faible."));
+
+//     hintTextTable[RHT_JUNK60] = HintText(CustomMessage("I heard @ is pretty good at Zelda.",
+//                                             /*german*/ "Ich habe gehört, daß @ ziemlich gut in Zelda Spielen ist.",
+//                                             /*french*/ "Apparemment, @ est super bon à Zelda."));
+
+//     hintTextTable[RHT_JUNK61] = HintText(CustomMessage("Hi @, we've been trying to reach you about your car's extended warranty. ",
+//                                             /*german*/ "Hallo @, wir haben versucht, Dich wegen der erweiterten Garantie für Dein Auto zu erreichen.",
+//                                             /*french*/ "Bonjour, @. Vous avez une voiture? Vous savez, nous offrons des assurances abordables..."));
+
+//     hintTextTable[RHT_JUNK62] = HintText(CustomMessage("They say that it's actually possible to beat the running man.",
+//                                             /*german*/ "Man erzählt sich, daß es tatsächlich möglich sei, den Marathon-Läufer zu besiegen.",
+//                                             /*french*/ "Selon moi, il est possible de battre le coureur.&Donc, tu prends ton arc, et..."));
+
+//     hintTextTable[RHT_JUNK63] = HintText(CustomMessage("They say this hint makes more sense in other languages.",
+//                                             /*german*/ "Man erzählt sich, daß dieser Hinweis in anderen Sprachen mehr Sinn macht.",
+//                                             /*french*/ "Selon moi, ces indices auraient pu être mieux traduits... Duh!"));
+
+//     // ^ Junk hints above are from 3drando
+//     // v Junk hints below are new to soh rando
+
+//     // Please keep hints to stuff related to ship directly, or to Nintendo/Zelda related stuff.
+//     // And nothing that's super obscure that no one's going to understand.
+
+//     hintTextTable[RHT_JUNK64] = HintText(CustomMessage("They say Greg is special.",
+//                                             /*german*/ "Man erzählt sich, daß Greg etwas Besonderes ist.",
+//                                             /*french*/ "Selon moi, Greg est spécial."));
+
+//     hintTextTable[RHT_JUNK65] = HintText(CustomMessage("They say the longer the Goron's neck, the wiser they are.",
+//                                             /*german*/ "Man erzählt sich, daß ein Gorone umso weiser wird, je länger sein Hals ist.",
+//                                             /*french*/ "Selon moi, plus le cou des Gorons est long, plus ils sont sage." ));
+
+//     hintTextTable[RHT_JUNK66] = HintText(CustomMessage("They say this ship is what all true gamers strive for.",
+//                                             /*german*/ "Man erzählt sich, daß dieses \"Ship\" das ist, wonach alle echten Gamer streben.",
+//                                             /*french*/ "Selon moi, cette version du port est ce pour quoi luttent tous les vrais gamers."));
+
+//     hintTextTable[RHT_JUNK67] = HintText(CustomMessage("They say that Glowsticks can be found in the Raveyard.",
+//                                             /*german*/ "Man erzählt sich, daß Leuchtstäbe auf dem Partyfriedhof zu finden wären.",
+//                                             /*french*/ "Selon moi, on peut trouver des Bâtons Lumineux sur le dancefloor du cimetière."));
+
+//     hintTextTable[RHT_JUNK68] = HintText(CustomMessage("They say @'s uncle works for Nintendo.",
+//                                             /*german*/ "Man erzählt sich, daß @'s Onkel bei Nintendo arbeitet.",
+//                                             /*french*/ "Selon moi, l'oncle de @ travaille chez Nintendo."));
+
+//     hintTextTable[RHT_JUNK69] = HintText(CustomMessage("They say pulling all gravestones in the graveyard leads to something magical.",
+//                                             /*german*/ "Man erzählt sich, daß das Ziehen aller Grabsteine auf dem Friedhof zu etwas Magischem führe.",
+//                                             /*french*/ "Selon moi, tirer toutes les tombes du Cimetière déclanche un truc magique."));
+
+//     hintTextTable[RHT_JUNK70] = HintText(CustomMessage("They say holding L while pausing makes you win the game.",
+//                                             /*german*/ "Man erzählt sich, daß man das Spiel gewinnt, wenn man L gedrückt hält, während man pausiert.",
+//                                             /*french*/ "Selon moi, maintenir L pendant que vous appuyez sur START vous permet de terminer le jeu."));
+
+//     hintTextTable[RHT_JUNK71] = HintText(CustomMessage("They say @'s body is ready.",
+//                                             /*german*/ "Man erzählt sich... nein weißt Du was, ich habe keine Lust mehr.",
+//                                             /*french*/ "Selon moi, ce junk hint ne se traduirait pas bien en français."));
 
     /*--------------------------
     |     DUNGEON HINT TEXT    |
@@ -1907,7 +1990,7 @@ void StaticData::HintTable_Init() {
                                                /*french*/ "Selon moi, l'#anémone bioélectrique# possède #[[1]]#.", {QM_RED, QM_GREEN})});
                                             // /*spanish*/la #anémona bioeléctrica# porta #[[1]]#.
 
-    hintTextTable[RHT_PHANTOM_GANON] = HintText(CustomMessage("They say that #Phantom Ganon# holds #[[1]]#.",
+    hintTextTable[RHT_PHANTOM_GANON] = HintText(CustomMessage("They say that #Shuro# holds #[[1]]#.",
                                                    /*german*/ "Man erzählt sich, daß #Phantom-Ganon# #[[1]]# hielte.",
                                                    /*french*/ "Selon moi, #Ganon Spectral# possède #[[1]]#.", {QM_RED, QM_GREEN}),
                                                 // /*spanish*/#Ganon Fantasma# porta #[[1]]#.
@@ -1947,7 +2030,7 @@ void StaticData::HintTable_Init() {
                                                   /*french*/ "Selon moi, le #monstre de l'ombre# possède #[[1]]#.", {QM_RED, QM_GREEN})});
                                                // /*spanish*/la #alimaña oscura espectral# porta #[[1]]#.
 
-    hintTextTable[RHT_TWINROVA] = HintText(CustomMessage("They say that #Twinrova# holds #[[1]]#.",
+    hintTextTable[RHT_TWINROVA] = HintText(CustomMessage("They say that #the Shupogakis# hold #[[1]]#.",
                                               /*german*/ "Man erzählt sich, daß #Twinrova# #[[1]]# hielte.",
                                               /*french*/ "Selon moi, #Twinrova# possède #[[1]]#.", {QM_RED, QM_GREEN}),
                                            // /*spanish*/#Birova# porta #[[1]]#.
@@ -2232,7 +2315,7 @@ void StaticData::HintTable_Init() {
                                                            // /*spanish*/Ja, ja, ja... Nunca me derrotarás reflejando mis esferas de energía y desplegando la flecha de luz de #[[1]]#!
                                                                       // ^E incluso si lo haces, nunca encontrarás la espada legendaria escondida en #[[2]]#!
 
-    hintTextTable[RHT_SHEIK_HINT_LA_ONLY] = HintText(CustomMessage("I overheard Ganondorf say that he misplaced the #Light Arrows# in #[[1]]#.",
+    hintTextTable[RHT_SHEIK_HINT_LA_ONLY] = HintText(CustomMessage("I overheard Wakamo say that she misplaced the #Light Arrows# in #[[1]]#.",
                                                         /*german*/ "Ich habe Ganondorf sagen hören, daß er die #Licht-Pfeile# #[[1]]# verlegt hat.",
                                                         /*french*/ "J'ai entendu dire que Ganondorf aurait caché les #Flèches de Lumière# dans #[[1]]#.",
                                                                    {QM_YELLOW, QM_RED}));

@@ -50,7 +50,7 @@ void BuildSheikMessage(uint16_t* textId, bool* loadFromMessageTable) {
                 msg = RAND_GET_HINT(RH_OOT_HINT)->GetHintMessage(MF_RAW);
             } else if (!CHECK_DUNGEON_ITEM(DUNGEON_KEY_BOSS, SCENE_GANONS_TOWER)) {
                 msg = CustomMessage(
-                    "@, meet me at %gGanon's Castle%w once you obtain the %rkey to his lair%w.",
+                    "@, meet me at %gWakamo's Castle%w once you obtain the %rkey to her lair%w.",
                     "@, wir treffen uns bei %gGanons Schloß%w, sobald Du den %rSchlüssel zu seinem Verlies%w hast.",
                     "Retrouve-moi au %gChâteau de Ganon%w une fois que tu auras obtenu la %rclé de son repaire%w.");
             } else {
@@ -65,7 +65,7 @@ void BuildSheikMessage(uint16_t* textId, bool* loadFromMessageTable) {
                          INV_CONTENT(ITEM_ARROW_LIGHT) == ITEM_ARROW_LIGHT && CUR_CAPACITY(UPG_QUIVER) >= 30 &&
                          gSaveContext.isMagicAcquired)) {
                 msg = CustomMessage(
-                    "You are still ill-equipped to face %rGanondorf%w."
+                    "You are still ill-equipped to face %rWakamo%w."
                     "^Seek out the %cMaster Sword%w, %rsomething to hold your arrows%w, and %gmagic%w to summon the "
                     "%ylight%w.",
                     "Du bist noch nicht gewappnet um Dich %rGanondorf%w stellen zu können.^"
