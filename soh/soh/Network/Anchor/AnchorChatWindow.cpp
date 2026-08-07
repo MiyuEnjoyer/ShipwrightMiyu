@@ -99,7 +99,7 @@ void AnchorChatWindow::Draw() {
 void AnchorChatWindow::DrawElement() {
     const float footerHeight = ImGui::GetStyle().ItemSpacing.y + ImGui::GetFrameHeightWithSpacing();
 
-    ImGui::BeginChild("AnchorChatScrollback", ImVec2(0, -footerHeight), true, ImGuiWindowFlags_HorizontalScrollbar);
+    ImGui::BeginChild("AnchorChatScrollback", ImVec2(0, -footerHeight), true);
 
     const bool showTimestamps = CVarGetInteger(CVAR_REMOTE_ANCHOR("ChatShowTimestamps"), 0) != 0;
 
