@@ -4,8 +4,12 @@
 
 #include "soh/Network/Network.h"
 #include <libultraship/libultraship.h>
+#include <libultraship/bridge/consolevariablebridge.h>
+#include <ship/window/gui/GuiWindow.h>
+#include <spdlog/spdlog.h>
 #include <queue>
 #include <mutex>
+#include <vector>
 
 extern "C" {
 #include "variables.h"
@@ -29,6 +33,7 @@ typedef struct {
     bool isSaveLoaded;
     bool isGameComplete;
     s16 sceneNum;
+    s8 curRoomNum;
     s32 entranceIndex;
 
     // Only available in PLAYER_UPDATE packets
@@ -86,6 +91,7 @@ class Anchor : public Network {
     void SetDummyPlayerClientId(const Actor* actor, uint32_t clientId);
 
     void HandlePacket_AllClientState(nlohmann::json payload);
+    void HandlePacket_ChatMessage(nlohmann::json payload);
     void HandlePacket_ConsumeAdultTradeItem(nlohmann::json payload);
     void HandlePacket_DamagePlayer(nlohmann::json payload);
     void HandlePacket_DisableAnchor(nlohmann::json payload);
@@ -114,6 +120,7 @@ class Anchor : public Network {
 
     // Packet types //
     inline static const std::string ALL_CLIENT_STATE = "ALL_CLIENT_STATE";
+    inline static const std::string CHAT_MESSAGE = "CHAT_MESSAGE";
     inline static const std::string DAMAGE_PLAYER = "DAMAGE_PLAYER";
     inline static const std::string DISABLE_ANCHOR = "DISABLE_ANCHOR";
     inline static const std::string ENTRANCE_DISCOVERED = "ENTRANCE_DISCOVERED";
@@ -153,6 +160,7 @@ class Anchor : public Network {
     bool CanTeleportTo(uint32_t clientId);
     uint32_t GetDummyPlayerClientId(const Actor* actor);
 
+    void SendPacket_ChatMessage(const std::string& message);
     void SendPacket_ClearTeamState(std::string teamId);
     void SendPacket_DamagePlayer(u32 clientId, u8 damageEffect, u8 damage);
     void SendPacket_EntranceDiscovered(u16 entranceIndex);
@@ -190,6 +198,27 @@ class AnchorRoomWindow : public Ship::GuiWindow {
     void DrawElement() override;
     void Draw() override;
     void UpdateElement() override{};
+};
+
+class AnchorChatWindow : public Ship::GuiWindow {
+  public:
+    using GuiWindow::GuiWindow;
+
+    void InitElement() override{};
+    void DrawElement() override;
+    void Draw() override;
+    void UpdateElement() override{};
+
+  private:
+    char mInputBuffer[512] = { 0 };
+    std::vector<std::string> mSentHistory;
+    int32_t mHistoryPos = -1;
+    
+    bool mRequestFocus = false;
+    int mCaptureFrames = 0;
+
+    static int InputTextCallback(ImGuiInputTextCallbackData* data);
+    void HandleHistoryNavigation(ImGuiInputTextCallbackData* data, bool up);
 };
 
 #endif // __cplusplus

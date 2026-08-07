@@ -98,6 +98,7 @@ std::shared_ptr<SohModalWindow> mModalWindow;
 std::shared_ptr<Notification::Window> mNotificationWindow;
 std::shared_ptr<TimeDisplayWindow> mTimeDisplayWindow;
 std::shared_ptr<AnchorRoomWindow> mAnchorRoomWindow;
+std::shared_ptr<AnchorChatWindow> mAnchorChatWindow;
 
 UIWidgets::Colors GetMenuThemeColor() {
     return mSohMenu->GetMenuThemeColor();
@@ -204,6 +205,8 @@ void SetupGuiElements() {
     gui->AddGuiWindow(mTimeDisplayWindow);
     mAnchorRoomWindow = std::make_shared<AnchorRoomWindow>(CVAR_WINDOW("AnchorRoom"), "Anchor Room");
     gui->AddGuiWindow(mAnchorRoomWindow);
+    mAnchorChatWindow = std::make_shared<AnchorChatWindow>(CVAR_WINDOW("AnchorChat"), "Anchor Chat");
+    gui->AddGuiWindow(mAnchorChatWindow);
 }
 
 void Destroy() {
@@ -238,6 +241,7 @@ void Destroy() {
     mPlandomizerWindow = nullptr;
     mTimeDisplayWindow = nullptr;
     mAnchorRoomWindow = nullptr;
+    mAnchorChatWindow = nullptr;
 }
 
 void RegisterPopup(std::string title, std::string message, std::string button1, std::string button2,

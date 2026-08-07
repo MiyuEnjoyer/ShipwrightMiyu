@@ -4,14 +4,30 @@
 #include "soh/SohGui/SohMenu.h"
 #include "soh/util.h"
 
+extern "C" {
+#include "variables.h"
+#include "functions.h"
+#include "sfx.h"
+}
+
 namespace SohGui {
 extern std::shared_ptr<SohMenu> mSohMenu;
 extern std::shared_ptr<AnchorRoomWindow> mAnchorRoomWindow;
+extern std::shared_ptr<AnchorChatWindow> mAnchorChatWindow;
 } // namespace SohGui
 
 static const char* pvpModes[3] = { "Off", "On", "On + Friendly Fire" };
 static std::vector<const char*> teleportModes = { "None", "Team Only", "All" };
 static std::vector<const char*> showLocationsModes = { "None", "Team Only", "All" };
+
+static const char* chatSfxOptions[] = {
+    "Message Pass",   // 0  NA_SE_SY_MESSAGE_PASS
+    "Cursor Move",    // 1  NA_SE_SY_CURSOR
+    "Cursor Decide",  // 2  NA_SE_SY_DECIDE
+    "File Cursor",    // 3  NA_SE_SY_FSEL_CURSOR
+    "Enter File",     // 4  NA_SE_SY_FSEL_DECIDE_L
+    "Tambourine"      // 5  NA_SE_SY_METRONOME
+};
 
 void AnchorMainMenu(WidgetInfo& info) {
     auto anchor = Anchor::Instance;
@@ -139,6 +155,100 @@ void AnchorMainMenu(WidgetInfo& info) {
     ImGui::SameLine();
 
     UIWidgets::WindowButton("Toggle Anchor Room Window", CVAR_WINDOW("AnchorRoom"), SohGui::mAnchorRoomWindow);
+
+    ImGui::Spacing();
+
+    UIWidgets::WindowButton("Toggle Anchor Chat Window", CVAR_WINDOW("AnchorChat"), SohGui::mAnchorChatWindow);
+
+    ImGui::AlignTextToFramePadding();
+    ImGui::TextUnformatted("Chat Message SFX");
+    ImGui::SameLine();
+
+    {
+        int sfxIndex = CVarGetInteger(CVAR_REMOTE_ANCHOR("ChatSfx"), 0);
+        const int sfxCount = IM_ARRAYSIZE(chatSfxOptions);
+
+        if (sfxIndex < 0 || sfxIndex >= sfxCount) {
+            sfxIndex = 0;
+        }
+
+        ImGui::SetNextItemWidth(ImGui::GetFontSize() * 10.0f); // tune width as you like
+        if (ImGui::Combo("##ChatMessageSfx", &sfxIndex, chatSfxOptions, sfxCount)) {
+            CVarSetInteger(CVAR_REMOTE_ANCHOR("ChatSfx"), sfxIndex);
+            Ship::Context::GetInstance()->GetWindow()->GetGui()->SaveConsoleVariablesNextFrame();
+        }
+    }
+
+    ImGui::SameLine();
+
+    {
+        ImGui::PushStyleVar(ImGuiStyleVar_ButtonTextAlign, ImVec2(0.5f, 0.5f));
+        ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(0.0f, 0.0f)); // tighter so the glyph sits in the middle
+
+        const float btnSize = ImGui::GetFrameHeight();
+        if (ImGui::Button(ICON_FA_PLAY, ImVec2(btnSize, btnSize))) {
+            static const u16 chatSfxIds[] = {
+                NA_SE_SY_MESSAGE_PASS,
+                NA_SE_SY_CURSOR,
+                NA_SE_SY_DECIDE,
+                NA_SE_SY_FSEL_CURSOR,
+                NA_SE_SY_FSEL_DECIDE_L,
+                NA_SE_SY_METRONOME
+            };
+
+            int idx = CVarGetInteger(CVAR_REMOTE_ANCHOR("ChatSfx"), 0);
+            if (idx < 0 || idx >= (int)(sizeof(chatSfxIds) / sizeof(chatSfxIds[0]))) {
+                idx = 0;
+            }
+
+            Audio_PlaySoundGeneral(chatSfxIds[idx],
+                                &gSfxDefaultPos, 4,
+                                &gSfxDefaultFreqAndVolScale,
+                                &gSfxDefaultFreqAndVolScale,
+                                &gSfxDefaultReverb);
+        }
+        if (ImGui::IsItemHovered()) {
+            ImGui::SetTooltip("Preview selected SFX");
+        }
+
+        ImGui::PopStyleVar(2);
+    }
+
+    static std::vector<const char*> chatHotkeyOptions = {
+        "Enter",  // 0
+        "T"       // 1
+    };
+
+    ImGui::Spacing();
+
+    ImGui::AlignTextToFramePadding();
+    ImGui::TextUnformatted("Chat Hotkey");
+    ImGui::SameLine();
+
+    {
+        int hotkeyIndex = CVarGetInteger(CVAR_REMOTE_ANCHOR("ChatHotkey"), 0);
+        if (hotkeyIndex < 0 || hotkeyIndex >= (int)chatHotkeyOptions.size()) {
+            hotkeyIndex = 0;
+        }
+
+        ImGui::SetNextItemWidth(ImGui::GetFontSize() * 8.0f);
+        if (ImGui::Combo("##ChatHotkey", &hotkeyIndex, chatHotkeyOptions.data(),
+                        (int)chatHotkeyOptions.size())) {
+            CVarSetInteger(CVAR_REMOTE_ANCHOR("ChatHotkey"), hotkeyIndex);
+            Ship::Context::GetInstance()->GetWindow()->GetGui()->SaveConsoleVariablesNextFrame();
+        }
+    }
+
+    ImGui::Spacing();
+
+    UIWidgets::CVarCheckbox(
+    "Show Timestamps in Chat",
+    CVAR_REMOTE_ANCHOR("ChatShowTimestamps"),
+    UIWidgets::CheckboxOptions()
+        .Color(THEME_COLOR)
+        .DefaultValue(false)
+        .Tooltip("Show [HH:MM] in front of every chat message"));
+
     if (!SohGui::mAnchorRoomWindow->IsVisible()) {
         SohGui::mAnchorRoomWindow->DrawElement();
     }
@@ -225,7 +335,6 @@ void AnchorInstructionsMenu(WidgetInfo& info) {
         "the same randomizer seed, while players on different teams can use different seeds.");
 }
 
-#ifdef ENABLE_REMOTE_CONTROL
 void RegisterAnchorMenu() {
     WidgetPath path = { "Network", "Anchor", SECTION_COLUMN_1 };
     SohGui::mSohMenu->AddWidget(path, "AnchorMainMenu", WIDGET_CUSTOM)
@@ -241,4 +350,3 @@ void RegisterAnchorMenu() {
 }
 
 static RegisterMenuInitFunc menuInitFunc(RegisterAnchorMenu);
-#endif
